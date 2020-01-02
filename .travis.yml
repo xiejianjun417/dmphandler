@@ -1,0 +1,5 @@
+language: cpp
+os: windows
+script: 
+  - devenv src\\dmphandler.sln /project dmphandler /build Release|Win32
+  - devenv src\\dmphandler.sln /project dmphandlerapp /build Release|Win32
