@@ -1,6 +1,6 @@
 language: cpp
 os: windows
-powershell: 
+script: 
   - vcvars32.bat
     devenv src\\dmphandler.sln /project dmphandler /build Release|Win32
     devenv src\\dmphandler.sln /project dmphandlerapp /build Release|Win32
