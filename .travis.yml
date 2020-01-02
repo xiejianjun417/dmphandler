@@ -1,4 +1,6 @@
 language: cpp
 os: windows
-script: 
-  - devenv src\\dmphandler.sln /project dmphandler /build Release|Win32
+script:
+  - /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/BuildTools/Common7/Tools/VsDevCmd.bat
+  - cd src\\dmphandler
+  - msbuild
