@@ -1,0 +1,2 @@
+cd src\dmphandler\
+msbuild
