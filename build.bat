@@ -1,5 +1,5 @@
 cd src\dmphandler
-gcc -fPIC -std=c++11 -Wall -c MiniDumpHandler.cpp -o MiniDumpHandler.o
-gcc -fPIC -std=c++11 -Wall -c dmphandler.cpp -o dmphandler.o
-gcc -fPIC -shared dmphandler.o MiniDumpHandler.o -o dmphandler.dll
+g++ -fPIC -std=c++11 -Wall -c MiniDumpHandler.cpp -o MiniDumpHandler.o
+g++ -fPIC -std=c++11 -Wall -I./include -c dmphandler.cpp -o dmphandler.o
+g++ -fPIC -shared dmphandler.o MiniDumpHandler.o -o dmphandler.dll
 
