@@ -1,7 +1,9 @@
 language: cpp
 os: windows
+before_install:
+  - choco install microsoft-build-tools-2013
 env:
-  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+  - MSBUILD_PATH="c:\Program Files (x86)\MSBuild\"
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - ./build.bat
