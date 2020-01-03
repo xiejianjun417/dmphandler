@@ -7,4 +7,5 @@ env:
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - ./build.bat
+  - make --help
   
