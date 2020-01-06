@@ -81,7 +81,7 @@ static BOOL SetPrivilege(
         lpszPrivilege,   // privilege to lookup 
         &luid ) )        // receives LUID of privilege
     {
-        printf("LookupPrivilegeValue error: %u\n", GetLastError() ); 
+        printf("LookupPrivilegeValue error: %u\n", (unsigned int)GetLastError() ); 
         return FALSE; 
     }
 
@@ -102,7 +102,7 @@ static BOOL SetPrivilege(
         ptpOld, 
         ((NULL != ptpOld) ? &dwReturn : NULL) ))
     { 
-        printf("AdjustTokenPrivileges error: %u\n", GetLastError() ); 
+        printf("AdjustTokenPrivileges error: %u\n", (unsigned int)GetLastError() ); 
         return FALSE; 
     } 
 
@@ -141,7 +141,7 @@ static void InnerMakeupDumpFilenameA(char *buffer, unsigned int bufLen)
         sprintf_s(buffer, bufLen, "_%d.dmp", rand());
     }
 }
-
+#if 0
 static void InnerMakeupDumpFilenameW(wchar_t *buffer, unsigned int bufLen)
 {
     time_t curTime;
@@ -161,7 +161,7 @@ static void InnerMakeupDumpFilenameW(wchar_t *buffer, unsigned int bufLen)
         swprintf_s(buffer, bufLen, L"_%d.dmp", rand());
     }
 }
-
+#endif//
 static void __cdecl InnerInvalidParameterHandler(const wchar_t *, const wchar_t *, const wchar_t *, unsigned int, uintptr_t)
 {
     printf("InnerInvalidParameterHandler\n");
