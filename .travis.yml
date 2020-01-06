@@ -1,5 +1,5 @@
 language: cpp
 os: windows
 script:
-  - ./build.bat
+  - ./build.sh
   
