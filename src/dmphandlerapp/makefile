@@ -8,7 +8,7 @@ TARGET = dmphandlerapp.exe
 INC_PATH += -I../dmphandler/include
 STATIC_LIBS +=
 STATIC_LIB_PATH +=
-LIBS += -lmsvcrt -ldmphandler
+LIBS += -ldmphandler
 LIB_PATH += -L../dmphandler/
 
 sources = main.cpp
