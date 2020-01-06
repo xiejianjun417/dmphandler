@@ -8,8 +8,8 @@ TARGET = dmphandlerapp.exe
 INC_PATH += -I../dmphandler/include
 STATIC_LIBS +=
 STATIC_LIB_PATH +=
-LIBS += -ldmphandler -lmsvcrt -llibvcruntime
-LIB_PATH += -L../dmphandler/ -L"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib"
+LIBS += -ldmphandler -lmsvcrt -lvcruntime
+LIB_PATH += -L../dmphandler/ -L"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64"
 
 sources = main.cpp
 
