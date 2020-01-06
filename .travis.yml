@@ -1,7 +1,7 @@
 language: cpp
 os: windows
 env:
-  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+  - MSBUILD_PATH="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\"
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - ./build.bat

@@ -1,5 +1,5 @@
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\vcvars32.bat"
-@rem dir "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\"
+dir "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\"
 
 @rem g++ -fPIC -std=c++11 -Wall -c MiniDumpHandler.cpp -o MiniDumpHandler.o
 @rem g++ -fPIC -std=c++11 -Wall -I./include -c dmphandler.cpp -o dmphandler.o
