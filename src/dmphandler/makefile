@@ -2,7 +2,7 @@ CC = g++
 CFLAGS := -fPIC -std=c++11 -Wall -g
 LDFLAGS := -fPIC -shared
 #dynamic library export file
-LDFLAGS += -Wl,--version-script=dmphandler.def
+LDFLAGS += -Wl,--version-script=dmphandler.ldef
 
 TARGET = dmphandler.dll
 INC_PATH += -I./include
