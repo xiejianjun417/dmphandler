@@ -9,7 +9,7 @@ TARGET = dmphandler.dll
 INC_PATH += -I./include
 STATIC_LIBS +=
 STATIC_LIB_PATH +=
-LIBS += -lmsvcrt -lvcruntime
+LIBS += -lvcruntime
 LIB_PATH += -L"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64"
 
 sources = dmphandler.cpp MiniDumpHandler.cpp
