@@ -9,7 +9,7 @@ TARGET = dmphandler.dll
 INC_PATH += -I./include
 STATIC_LIBS +=
 STATIC_LIB_PATH +=
-LIBS += -lstdc++
+LIBS += 
 LIB_PATH +=
 
 sources = dmphandler.cpp MiniDumpHandler.cpp
