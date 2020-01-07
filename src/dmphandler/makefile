@@ -3,13 +3,13 @@ CFLAGS := -fPIC -std=c++11 -Wall -g
 LDFLAGS := -fPIC -shared
 #dynamic library export file
 #LDFLAGS += -Wl,--version-script=dmphandler.ldef
-LDFLAGS += -Wl,--output-def,dmphandler.ldef,--out-implib,libdmphandler.a
+LDFLAGS += -Wl,--output-def,dmphandler.def,--out-implib,libdmphandler.a
 
 TARGET = dmphandler.dll
 INC_PATH += -I./include
 STATIC_LIBS +=
 STATIC_LIB_PATH +=
-LIBS += -lcmt
+LIBS += -lstdc++
 LIB_PATH +=
 
 sources = dmphandler.cpp MiniDumpHandler.cpp
@@ -20,14 +20,14 @@ objects := $(patsubst %.c, %.o, $(objects))
 all : $(TARGET)
 	@echo "make done"
 %.o : %.cpp
-	$(CC) $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
+	$(CC) -v $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
 %.o : %.cc
-	$(CC) $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
+	$(CC) -v $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
 %.o : %.c
-	$(CC) $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
+	$(CC) -v $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
 
 $(TARGET) : $(objects)
-	$(CC) $(LDFLAGS) $^ -Wl,-Bstatic $(STATIC_LIBS) $(STATIC_LIB_PATH) -Wl,-Bdynamic $(LIBS) $(LIB_PATH) -o $@
+	$(CC) -v $(LDFLAGS) $^ -Wl,-Bstatic $(STATIC_LIBS) $(STATIC_LIB_PATH) -Wl,-Bdynamic $(LIBS) $(LIB_PATH) -o $@
 
 clean :
 	-rm -rf *.o *.a $(TARGET)
