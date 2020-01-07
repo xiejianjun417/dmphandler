@@ -20,14 +20,14 @@ objects := $(patsubst %.c, %.o, $(objects))
 all : $(TARGET)
 	@echo "make done"
 %.o : %.cpp
-	$(CC) -v $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
+	$(CC) $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
 %.o : %.cc
-	$(CC) -v $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
+	$(CC) $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
 %.o : %.c
-	$(CC) -v $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
+	$(CC) $(CFLAGS) $(DEFINES) $(INC_PATH) -c $< -o $@
 
 $(TARGET) : $(objects)
-	$(CC) -v $(LDFLAGS) $^ -Wl,-Bstatic $(STATIC_LIBS) $(STATIC_LIB_PATH) -Wl,-Bdynamic $(LIBS) $(LIB_PATH) -o $@
+	$(CC) $(LDFLAGS) $^ -Wl,-Bstatic $(STATIC_LIBS) $(STATIC_LIB_PATH) -Wl,-Bdynamic $(LIBS) $(LIB_PATH) -o $@
 
 clean :
 	-rm -rf *.o *.a $(TARGET)
