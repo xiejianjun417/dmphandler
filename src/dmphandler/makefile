@@ -10,7 +10,7 @@ INC_PATH += -I./include
 STATIC_LIBS +=
 STATIC_LIB_PATH +=
 LIBS += -lvcruntime -lmsvcrt
-LIB_PATH += -L"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64"
+LIB_PATH +=
 
 sources = dmphandler.cpp MiniDumpHandler.cpp
 
