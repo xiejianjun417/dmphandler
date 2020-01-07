@@ -5,7 +5,7 @@ dir "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w6
 cd src\dmphandler
 g++ -fPIC -Wall -g -I./include -c MiniDumpHandler.cpp -o MiniDumpHandler.o
 g++ -fPIC -Wall -g -I./include -c dmphandler.cpp -o dmphandler.o
-g++ -v -fPIC -shared MiniDumpHandler.o dmphandler.o -o dmphandler.dll -lmsvcrt100
+g++ -v -fPIC -shared MiniDumpHandler.o dmphandler.o -o dmphandler.dll -lmsvcr100
 dir .
 
 @rem mingw32-make -C src\dmphandler all
