@@ -3,13 +3,13 @@ CFLAGS := -fPIC -std=c++11 -Wall -g
 LDFLAGS := -fPIC -shared
 #dynamic library export file
 #LDFLAGS += -Wl,--version-script=dmphandler.ldef
-LDFLAGS += -Wl,--output-def,dmphandler.def,--out-implib,libdmphandler.a
+LDFLAGS += -Wl,--output-def,dmphandler.ldef,--out-implib,libdmphandler.a
 
 TARGET = dmphandler.dll
 INC_PATH += -I./include
 STATIC_LIBS +=
 STATIC_LIB_PATH +=
-LIBS += -lmsvcrt
+LIBS += -lcmt
 LIB_PATH +=
 
 sources = dmphandler.cpp MiniDumpHandler.cpp
